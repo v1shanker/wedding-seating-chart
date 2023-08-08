@@ -1,0 +1,46 @@
+{# templates/dropdown.html #}
+
+<html lang="en">
+
+<style>
+    body {text-align:center}
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dropdown Title</title>
+</head>
+
+<body>
+    <form type="text" action="/find_guest" method="get">
+      <label for="name_dropdown">Find Your Name: </label>
+      <input autocomplete="on" type="search" list="guest_names" name="name_dropdown">
+      <select id="guest_names">
+        {% for g in guests %}
+            <option value="{{g}}">{{g}}</option>
+        {% endfor %}
+      </select>
+      <input type="submit">
+    </form>
+</body>
+
+</html>
+
+<!--
+    <label for="name_dropdown">Find Your Name: </label>
+    <select name="name_dropdown" placeholder="Find your name...">
+        {% for g in guests %}
+            <option value="{{g}}">{{g}}</option>
+        {% endfor %}
+    </select>
+
+<form type="text" id="homeForm" class="centered" method="post" onsubmit="return false;">
+        <input type="text" id="homeInput" autocomplete=on list="topps" placeholder="Input here">
+        <datalist id="topps">
+            {% for top in topps %}
+            <option value="{{ top }}">
+            {% endfor %}
+        </datalist>
+        <button type="submit" id="homeSubmit">Submit</button>
+</form>
+-->
