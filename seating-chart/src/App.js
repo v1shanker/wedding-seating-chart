@@ -3,8 +3,7 @@ import './App.css';
 
 import * as React from 'react';
 import Autocomplete from '@mui/joy/Autocomplete';
-import Typography from '@mui/joy/Autocomplete';
-//import Input from '@mui/joy/Input';
+import Typography from '@mui/joy/Typography';
 
 const name_table_map = [
   { name: 'Name 1', id: 1 },
@@ -13,15 +12,26 @@ const name_table_map = [
 
 
 export default function App() {
-  return  <Autocomplete
-            options={name_table_map}
-            getOptionLabel={option => option.name}
-            onChange={(event, value) => console.log(value)} // prints the selected value
-            renderinput={params => (
-                <Typography {...params} color="success" level="title-lg" variant="solid" />
-                //<TextField {...params} label="Label" variant="outlined" fullWidth />
-            )}
-          />;
-
+  return  <React.Fragment >
+            <DropDown />
+            <TableNumber />
+          </React.Fragment >
 }
 
+export function DropDown() {
+  return  <Autocomplete
+            className = '_dropdown'
+            options={name_table_map}
+            getOptionLabel={option => option.name}
+            onChange={(event, value) =>
+                document.getElementById('_tableNumber').innerHTML= value?.id || 'Please select name'}
+          />;
+}
+
+export function TableNumber() {
+    return (<Typography
+             id = '_tableNumber'
+            >
+           </Typography>
+           )
+}
