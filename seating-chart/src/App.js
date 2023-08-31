@@ -12,10 +12,10 @@ const name_table_map = [
 
 
 export default function App() {
-  return  <React.Fragment >
+  return  <div className="main">
             <DropDown />
             <TableNumber />
-          </React.Fragment >
+          </div>
 }
 
 export function DropDown() {

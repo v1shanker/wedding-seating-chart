@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.main {
+    background-image: url(./background.jpg) no-repeat center center fixed;
+}
