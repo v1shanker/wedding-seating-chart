@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Serathine';
+  src: local('Serathine'), url(./fonts/Serathine.woff) format('woff');
+}
+
 .App {
   text-align: center;
 }
@@ -24,6 +29,12 @@
   color: white;
 }
 
+.App-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -37,6 +48,16 @@
   }
 }
 
-.main {
-    background-image: url(./background.jpg) no-repeat center center fixed;
+.titulo{
+    padding-top: 1em;
+    padding-bottom: 0em;
+    font-family: 'Serathine';
 }
+
+.main {
+    background-image: url(./background.jpg);
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 0em;
+}
+

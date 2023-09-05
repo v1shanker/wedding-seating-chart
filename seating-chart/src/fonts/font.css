@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Serathine':
+    src: local('Serathine'),
+         url('./fonts/Serathine.woff') format('woff'),
+         url('./fonts/Serathine.woff2') format('woff2');
+}
+
