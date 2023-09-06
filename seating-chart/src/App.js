@@ -434,6 +434,88 @@ export default function App() {
          </div>
 }
 
+function dropdown_onChange(event, value) {
+    document.getElementById('_tableNumber').innerHTML= value ? ("You are seated at Table " + value.id) : '';
+    var e = document.getElementById('seating-img');
+    if (value == null) {
+        e.src = "./sc/sctemplate.svg";
+    } else if (value.id == 1) {
+        e.src = "./sc/sc1.svg";
+    } else if (value.id == 2) {
+        e.src = "./sc/sc2.svg";
+    } else if (value.id == 3) {
+        e.src = "./sc/sc3.svg";
+    } else if (value.id == 4) {
+        e.src = "./sc/sc4.svg";
+    } else if (value.id == 5) {
+        e.src = "./sc/sc5.svg";
+    } else if (value.id == 6) {
+        e.src = "./sc/sc6.svg";
+    } else if (value.id == 7) {
+        e.src = "./sc/sc7.svg";
+    } else if (value.id == 8) {
+        e.src = "./sc/sc8.svg";
+    } else if (value.id == 9) {
+        e.src = "./sc/sc9.svg";
+    } else if (value.id == 10) {
+        e.src = "./sc/sc10.svg";
+    } else if (value.id == 11) {
+        e.src = "./sc/sc11.svg";
+    } else if (value.id == 12) {
+        e.src = "./sc/sc12.svg";
+    } else if (value.id == 13) {
+        e.src = "./sc/sc13.svg";
+    } else if (value.id == 14) {
+        e.src = "./sc/sc14.svg";
+    } else if (value.id == 15) {
+        e.src = "./sc/sc15.svg";
+    } else if (value.id == 16) {
+        e.src = "./sc/sc16.svg";
+    } else if (value.id == 17) {
+        e.src = "./sc/sc17.svg";
+    } else if (value.id == 18) {
+        e.src = "./sc/sc18.svg";
+    } else if (value.id == 19) {
+        e.src = "./sc/sc19.svg";
+    } else if (value.id == 20) {
+        e.src = "./sc/sc20.svg";
+    } else if (value.id == 21) {
+        e.src = "./sc/sc21.svg";
+    } else if (value.id == 22) {
+        e.src = "./sc/sc22.svg";
+    } else if (value.id == 23) {
+        e.src = "./sc/sc23.svg";
+    } else if (value.id == 24) {
+        e.src = "./sc/sc24.svg";
+    } else if (value.id == 25) {
+        e.src = "./sc/sc25.svg";
+    } else if (value.id == 26) {
+        e.src = "./sc/sc26.svg";
+    } else if (value.id == 27) {
+        e.src = "./sc/sc27.svg";
+    } else if (value.id == 28) {
+        e.src = "./sc/sc28.svg";
+    } else if (value.id == 29) {
+        e.src = "./sc/sc29.svg";
+    } else if (value.id == 30) {
+        e.src = "./sc/sc30.svg";
+    } else if (value.id == 31) {
+        e.src = "./sc/sc31.svg";
+    } else if (value.id == 32) {
+        e.src = "./sc/sc32.svg";
+    } else if (value.id == 33) {
+        e.src = "./sc/sc33.svg";
+    } else if (value.id == 34) {
+        e.src = "./sc/sc34.svg";
+    } else if (value.id == 35) {
+        e.src = "./sc/sc35.svg";
+    } else if (value.id == 36) {
+        e.src = "./sc/sc36.svg";
+    } else if (value.id == 37) {
+        e.src = "./sc/sc37.svg";
+    }
+}
+
 export function TitleHeader() {
     return <Typography level="h1" align="center" sx={{ fontFamily: 'Serathine' }}
               className = {titletheme.titleheader}
@@ -446,8 +528,7 @@ export function DropDown() {
             placeholder = "Enter your name"
             options={name_table_map}
             getOptionLabel={option => option.name}
-            onChange={(event, value) =>
-                document.getElementById('_tableNumber').innerHTML= value ? ("You are seated at Table " + value.id) : ''}
+            onChange={dropdown_onChange}
           />;
 }
 
@@ -460,5 +541,5 @@ export function TableNumber() {
 }
 
 export function SeatingChartImage() {
-    return <img src="./sctemplate.svg" id="seating-img" text-align="center" style={{ marginLeft: "10%", width: "80%" }} />
+    return <img src="./sc/sctemplate.svg" id="seating-img" text-align="center" style={{ marginLeft: "10%", width: "80%" }} />
 }
