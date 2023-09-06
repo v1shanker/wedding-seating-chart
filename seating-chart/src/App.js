@@ -513,6 +513,16 @@ function dropdown_onChange(event, value) {
         e.src = "./sc/sc36.svg";
     } else if (value.id == 37) {
         e.src = "./sc/sc37.svg";
+    } else if (value.id == 38) {
+        e.src = "./sc/sc38.svg";
+    } else if (value.id == 39) {
+        e.src = "./sc/sc39.svg";
+    } else if (value.id == 40) {
+        e.src = "./sc/sc40.svg";
+    } else if (value.id == 41) {
+        e.src = "./sc/sc41.svg";
+    } else if (value.id == 42) {
+        e.src = "./sc/sc42.svg";
     }
 }
 
