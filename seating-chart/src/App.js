@@ -543,7 +543,7 @@ export function DropDown() {
 }
 
 export function TableNumber() {
-    return (<Typography align="center" sx={{ color: "#AF9B6D", background: "#FFFFFF" }}
+    return (<Typography align="center" sx={{ color: "#AF9B6D", background: "#FFFFFF", marginLeft: "10%", marginRight: "10%", border: "1px solid #AF9B6D" }}
              id = '_tableNumber'
             >
            </Typography>
@@ -551,5 +551,5 @@ export function TableNumber() {
 }
 
 export function SeatingChartImage() {
-    return <img src="./sc/sctemplate.svg" id="seating-img" text-align="center" style={{ marginLeft: "10%", width: "80%" }} />
+    return <img src="./sc/sctemplate.svg" id="seating-img" text-align="center" style={{ marginLeft: "10%", width: "80%", border: "1px solid #AF9B6D" }} />
 }
