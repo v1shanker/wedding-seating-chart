@@ -435,6 +435,7 @@ export default function App() {
 }
 
 function dropdown_onChange(event, value) {
+    document.getElementById('_tableNumber').style.visibility = value ? "visible" : "hidden";
     document.getElementById('_tableNumber').innerHTML= value ? ("You are seated at Table " + value.id) : '';
     var e = document.getElementById('seating-img');
     if (value == null) {
@@ -543,7 +544,7 @@ export function DropDown() {
 }
 
 export function TableNumber() {
-    return (<Typography align="center" sx={{ color: "#AF9B6D", background: "#FFFFFF", marginLeft: "10%", marginRight: "10%", border: "1px solid #AF9B6D" }}
+    return (<Typography align="center" sx={{ color: "#AF9B6D", background: "#FFFFFF", marginLeft: "10%", marginRight: "10%", border: "1px solid #AF9B6D", visibility: "hidden" }}
              id = '_tableNumber'
             >
            </Typography>
